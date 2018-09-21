@@ -18,9 +18,12 @@ libc = "0.2"
 ord_subset = { optional = true, version = "3" }
 rustc-serialize = { optional = true, version = "0.3" }
 serde = { optional = true, version = "1" }
+num-traits = { optional = true, version = "0.2.6" }
+approx = { optional = true, version = "0.3.0" }
 
 [features]
 default = ["ord_subset", "rustc-serialize", "serde"]
+alga-support = ["num-traits", "approx"]
 
 [build-dependencies]
 cc = "1"

@@ -25,6 +25,9 @@ use std::ops::{Add, AddAssign, Sub, SubAssign, Mul, MulAssign, Div, DivAssign, R
 use std::str::FromStr;
 use std::str::from_utf8_unchecked;
 
+#[cfg(feature = "alga-support")]
+pub use alga_support::*;
+
 thread_local!(static CTX: RefCell<Context> = RefCell::new(d128::default_context()));
 
 #[repr(C)]
